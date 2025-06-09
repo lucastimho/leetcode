@@ -21,15 +21,25 @@ Constraints:
 def solution(nums, target):
     """
     Approach:
-    Make hashmap of seen nums
-    
-    Time Complexity: O()
-    Space Complexity: O()
+    Make a hashmap of numbers seen
+    Iterate through an enumerated dictionary of the numbers
+    Create a complement pointer
+    Add conditional if the complement is found in the dictionary
+    Return the index of the hashmap and current iteration of the index
+    Else, allocate an entry into the hashmap in the form of number: index
+
+    Time Complexity: O(n)
+    Space Complexity: O(n)
     """
 
-    seen = {}
+    map = {}
 
-    pass
+    for i, num in enumerate(nums):
+        complement = target - num
+        if complement in map:
+            return [map[complement], i]
+        map[num] = i
+    return []
 
 def test_solution():
     # Test case 1
