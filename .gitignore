@@ -1,2 +1,5 @@
 # Ignore all files in the .vscode directory
 .vscode/
+
+# Ignore all .exe files
+./cpp/*/*.exe

@@ -86,9 +86,9 @@ void testSolution()
     bool expected = true;
     bool result = sol.solution(str);
     if (result == expected)
-      cout << "Test case 1 passed!" << endl;
+      cout << "Test case 2 passed!" << endl;
     else
-      cout << "Test case 1 failed!" << endl;
+      cout << "Test case 2 failed!" << endl;
   }
 
   cout << "All test cases passed!" << endl;
