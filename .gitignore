@@ -2,4 +2,4 @@
 .vscode/
 
 # Ignore all .exe files
-./cpp/*/*.exe
+*.exe
