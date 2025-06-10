@@ -34,8 +34,8 @@ public:
   If the count matches the complement, return the complement index (map.count()) and current index
   Else edit the map entry to vector[i]: i
 
-  Time Complexity: O()
-  Space Complexity: O()
+  Time Complexity: O(n)
+  Space Complexity: O(n)
   */
   vector<int> solution(vector<int>& nums, int target)
   {
