@@ -21,11 +21,32 @@ s consists only of printable ASCII characters.
 def solution(s):
     """
     Approach:
-    [Write your approach here]
+    Create a left and right pointer
+    Left pointer will increment, right pointer will decrement
+    Loop continously to move each pointer
+    Make conditionals for both left and right pointer to check alphanumeric characters
+    If lowercase pointer do not match return false, otherwise return true
     
     Time Complexity: O()
     Space Complexity: O()
     """
+    left, right = 0, len(s) - 1
+
+    while (left < right):
+        if not s[left].isalnum():
+            left += 1
+            continue
+
+        if not s[right].isalnum():
+            right -= 1
+            continue
+
+        if s[left].lower() != s[right].lower():
+            return False
+        
+        left += 1
+        right -= 1
+        
     return True
 
 def test_solution():

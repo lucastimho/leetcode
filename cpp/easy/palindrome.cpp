@@ -19,12 +19,8 @@ s consists only of printable ASCII characters.
 */
 
 #include <iostream>
-#include <vector>
 #include <string>
-#include <unordered_map>
-#include <unordered_set>
-#include <queue>
-#include <stack>
+#include <cctype>
 using namespace std;
 
 class Solution
@@ -32,7 +28,11 @@ class Solution
 public:
   /*
   Approach:
-  [Write your approach here]
+  Create a left and right pointer
+  Left pointer will increment, right pointer will decrement
+  Loop continously to move each pointer
+  Make conditionals for both left and right pointer to check alphanumeric characters
+  If lowercase pointer do not match return false, otherwise return true
 
   Time Complexity: O()
   Space Complexity: O()
@@ -40,7 +40,28 @@ public:
   bool solution(string s)
   {
     // Implementation
-    return;
+    int left = 0;
+    int right = s.length() - 1;
+
+    while (left < right) {
+        if (!isalnum(s[left])) {
+            left += 1;
+            continue;
+        }
+
+        if (!isalnum(s[right])) {
+            right -= 1;
+            continue;
+        }
+
+        if (tolower(s[left]) != tolower(s[right])) {
+            return false;
+        }
+
+        left += 1;
+        right -= 1;
+    }
+    return true;
   }
 };
 
