@@ -29,5 +29,8 @@
   "editor.suggest.showFolders": false,
   "editor.suggest.showColors": false,
   "editor.suggest.showTypeParameters": false,
-  "editor.suggest.showSnippets": false
+  "editor.suggest.showSnippets": false,
+  "files.associations": {
+    "vector": "cpp"
+  }
 }
