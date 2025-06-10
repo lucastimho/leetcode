@@ -33,8 +33,8 @@ def test_solution():
     assert solution(input1) == expected1, f"Test case 1 failed. Expected {expected1}, got {solution(input1)}"
     
     # Test case 2
-    input2 = []
-    expected2 = []
+    input2 = "pwwkew"
+    expected2 = 3
     assert solution(input2) == expected2, f"Test case 2 failed. Expected {expected2}, got {solution(input2)}"
     
     print("All test cases passed!")
