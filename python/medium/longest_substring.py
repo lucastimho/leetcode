@@ -16,7 +16,7 @@ Constraints:
 s consists of English letters, digits, symbols and spaces.
 """
 
-def solution():
+def solution(s):
     """
     Approach:
     [Write your approach here]
@@ -24,7 +24,17 @@ def solution():
     Time Complexity: O()
     Space Complexity: O()
     """
-    pass
+    char = set()
+    left = 0
+    length = 0
+
+    for right in range(len(s)):
+        while s[right] in char:
+            char.remove(s[left])
+            left += 1
+        char.add(s[right])
+        length = max(length, right - left + 1)
+    return length
 
 def test_solution():
     # Test case 1
