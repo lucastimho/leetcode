@@ -17,12 +17,9 @@ s consists of English letters, digits, symbols and spaces.
 */
 
 #include <iostream>
-#include <vector>
 #include <string>
-#include <unordered_map>
 #include <unordered_set>
-#include <queue>
-#include <stack>
+#include <algorithm>
 using namespace std;
 
 class Solution
@@ -38,7 +35,19 @@ public:
   int solution(string s)
   {
     // Implementation
-    return;
+    unordered_set<char> set;
+    int left = 0;
+    int length = 0;
+    for (int right = 0; right < s.length(); ++right) {
+      while (set.count(s[right])) {
+        set.erase(s[left]);
+        left++;
+      }
+      set.insert(s[right]);
+      length = max(length, right - left + 1);
+    }
+
+    return length;
   }
 };
 
