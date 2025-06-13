@@ -19,7 +19,12 @@ s consists of English letters, digits, symbols and spaces.
 def solution(s):
     """
     Approach:
-    [Write your approach here]
+    Create a set of characters
+    Intialize a left pointer and length to zero
+    Iterate through the string using a right pointer
+    While the right pointer character is in the set, remove the left pointer character and increment the left pointer
+    Add the right pointer character to the set
+    Let length be the maximum value of the established length or the difference between the right and left pointer plus 1
     
     Time Complexity: O()
     Space Complexity: O()
